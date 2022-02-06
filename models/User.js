@@ -1,4 +1,4 @@
-const { Schema, model, Types } =require('mongoose');
+const { Schema, model, Types, SchemaTypes } =require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const { isEmail } = require('validator');
