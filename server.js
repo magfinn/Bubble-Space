@@ -8,8 +8,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// app.use(require('./routes'));
+app.use(require('./routes'));
 
+// mongoose.connect() tells Mongoose which database we want to connect to
+// If the environment variable MONGODB_URI exists, like on Heroku when we deploy later, it will use that. 
+// Otherwise, it will short-circuit to the local MongoDB server's database at mongodb://localhost:27017/bubble-space
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost:27017/bubble-space',
   {
