@@ -3,26 +3,6 @@ const dateFormat = require('../utils/dateFormat');
 
 const { isEmail } = require('validator');
 
-const FriendSchema = new Schema(
-  {
-    friendId: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: (createdAtVal) => dateFormat(createdAtVal),
-    },
-  },
-  {
-    toJSON: {
-      virtuals: true,
-      getters: true,
-    },
-  }
-);
-
 const UserSchema = new Schema(
   {
     username: {
@@ -46,7 +26,12 @@ const UserSchema = new Schema(
       },
     ],
     //array of _id values referencing the User model (self-reference)
-    friends: [FriendSchema],
+    friends: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+      }
+    ]
   },
   {
     toJSON: {
