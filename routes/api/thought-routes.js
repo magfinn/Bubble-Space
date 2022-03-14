@@ -27,11 +27,11 @@ router
 // ('/:thoughtId/reactions')
 //POST new reaction stored in a single thought's reactions array field
 router
-    .route('/:id/reactions')
+    .route('/:thoughtId/reactions')
     .post(createReaction);
 
 router
-    .route('/:id/reactions/:reactionId')
+    .route('/:thoughtId/reactions/:reactionId')
     .delete(deleteReactionById);
 
 
