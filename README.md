@@ -31,9 +31,7 @@ Start your server:
 
 # Demos:
 
->>Walkthrough of API route testing in Insomnia
-  ![Demo Part 1](https://watch.screencastify.com/v/OW4IWudTR8P5ZYWcum5n)
-  ![Demo Part 2](https://watch.screencastify.com/v/oYKQM7xKlasdcwXYNvqX)
+>>[Walkthrough of API route testing in Insomnia](https://watch.screencastify.com/v/XBTpN3M8p7zz5OqOCxlL)
 
 ## 🚥 Tests
 
